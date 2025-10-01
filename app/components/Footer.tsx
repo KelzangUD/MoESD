@@ -1,0 +1,124 @@
+import Image from "next/image";
+import twitter from "@/public/images/twitter-alt-square.svg";
+import facebook from "@/public/images/facebook-square.svg";
+import instagram from "@/public/images/instagram-square.svg";
+import youtube from "@/public/images/youtube-square.svg";
+import tiktok from "@/public/images/tiktok-square.svg";
+
+export default function Footer() {
+  return (
+    <div className="p-2 lg:p-8 bg-white font-mono">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="w-full">
+          <h6 className="font-bold">ICT Services</h6>
+          <hr className="my-2 border-t-2 border-[#d6d6d6]" />
+          <ul className="leading-7">
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Apply for ESWS Loan
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              ESWS new member registration form
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              ESWS Semso form
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              ESWS Refund form
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Request for Media Coverage
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Booking form for National Scouts Center, Paro
+            </li>
+          </ul>
+        </div>
+        <div className="w-full">
+          <h6 className="font-bold">Important Links</h6>
+          <hr className="my-2 border-t-2 border-[#d6d6d6]" />
+          <ul className="leading-7">
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              RENEW
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              G2C Services
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Ministry of Health
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Ministry of Finance
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Audit Clearance System
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Assets Declaration System
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Zhiyog Electronics System (ZESt)
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Security Clearance System
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Department of Revenue & Custom
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Government Inventory Management System
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Ministry of Agriculture and Livestock
+            </li>
+            <li className="hover:text-blue-500 hover:cursor-pointer hover:font-semibold hover:underline">
+              Ministry of Industry, Commerce and Employment
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr className="my-6 border-t-2 border-[#d6d6d6]" />
+      <div className="my-2">
+        <div className="flex justify-center gap-2 mb-4">
+          <Image
+            src={twitter}
+            alt="twitter"
+            width="24"
+            height="24"
+            className="rounded hover:cursor-pointer"
+          />
+          <Image
+            src={facebook}
+            alt="facebook"
+            width="24"
+            height="24"
+            className="rounded hover:cursor-pointer"
+          />
+          <Image
+            src={instagram}
+            alt="instagram"
+            width="24"
+            height="24"
+            className="rounded hover:cursor-pointer"
+          />
+          <Image
+            src={youtube}
+            alt="youtube"
+            width="24"
+            height="24"
+            className="rounded hover:cursor-pointer"
+          />
+          <Image
+            src={tiktok}
+            alt="tiktok"
+            width="24"
+            height="24"
+            className="rounded hover:cursor-pointer"
+          />
+        </div>
+        <p className="text-center text-sm">
+          Copyright © 2025 - Ministry of Education & Skills Development (MoESD)
+        </p>
+      </div>
+    </div>
+  );
+}
