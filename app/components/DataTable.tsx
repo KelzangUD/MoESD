@@ -42,7 +42,7 @@ export default function DataTable({ data }: { data: Row[] }) {
       </div>
       <div className="mt-2 overflow-x-auto w-full border border-gray-400 bg-white text-left">
         <div className="min-w-[1000px]">
-          <table className="overflow-x-auto min-w-100 border border-gray-400 bg-white text-left">
+          <table className="overflow-x-auto min-w-full border border-gray-400 bg-white text-left">
             <thead>
               <tr>
                 <th className="w-1/14 border-y border-gray-300 py-4 px-3">
