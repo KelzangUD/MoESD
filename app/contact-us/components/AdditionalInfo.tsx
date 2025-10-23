@@ -1,8 +1,8 @@
 export default function AdditionalInfo() {
   return (
-    <div className="p-4 lg:p-8 font-mono py-12">
-      <h5 className="font-bold text-2xl">Additional Contact Information</h5>
-      <div className="my-8 overflow-x-auto w-full border border-gray-400 bg-white text-left">
+    <div className="p-4 lg:p-8 md:py-12">
+      <h2>Additional Contact Information</h2>
+      <div className="my-2 md:my-8 overflow-x-auto w-full border border-gray-400 bg-white text-left">
         <table className="overflow-x-auto w-full border border-[#d6d6d6] bg-white text-left">
           <thead>
             <tr>
@@ -17,7 +17,7 @@ export default function AdditionalInfo() {
               </th>
             </tr>
           </thead>
-          <tbody className="text-sm">
+          <tbody className="text-xs md:text-sm">
             <tr className="h-12">
               <td className="border-y border-[#d6d6d6] px-3 text-left">
                 Office of the Minister
@@ -117,7 +117,7 @@ export default function AdditionalInfo() {
           </tbody>
         </table>
       </div>
-      <div className="my-8 overflow-x-auto w-full border border-gray-400 bg-white text-left">
+      <div className="md:my-8 overflow-x-auto w-full border border-gray-400 bg-white text-left">
         <table className="overflow-x-auto w-full border border-[#d6d6d6] bg-white text-left">
           <thead>
             <tr>
@@ -132,7 +132,7 @@ export default function AdditionalInfo() {
               </th>
             </tr>
           </thead>
-          <tbody className="text-sm">
+          <tbody className="text-xs md:text-sm">
             <tr className="h-12">
               <td className="border-y border-[#d6d6d6] px-3 text-left">
                 Policy and Planning Division (PPD)

@@ -25,19 +25,19 @@ const UpdateCard: React.FC<UpdateCardProps> = ({
   return (
     <div className="flex flex-col rounded-md border border-[#D9D9D9] overflow-hidden">
       {/* Image Section */}
-      <div className="w-full relative h-70">
+      <div className="w-full relative h-40 md:h-70">
         <Image src={image} alt={title} fill className="object-cover" priority />
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col p-8 flex-1">
-        <h5 className="font-bold text-md">{title}</h5>
+      <div className="flex flex-col p-4 md:p-8 flex-1">
+        <h6>{title}</h6>
         <p className="my-2">{date}</p>
 
         <div className="flex gap-2">
           {category?.map((item) => (
             <span
-              className="bg-[#d9d9d9] rounded-2xl px-3 py-0.5 text-sm"
+              className="bg-[#d9d9d9] rounded-2xl px-3 py-0.5 text-xs md:text-sm"
               key={item}
             >
               {item}
@@ -45,10 +45,10 @@ const UpdateCard: React.FC<UpdateCardProps> = ({
           ))}
         </div>
 
-        <p className="my-8">{description}</p>
+        <p className="my-4 md:my-8">{description}</p>
 
         {/* Push this button to the bottom */}
-        <button className="mt-auto flex gap-4 font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
+        <button className="mt-auto flex gap-4 text-xs items-center md:text-base font-semibold md:font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
           Read More
           <Image src={arrow_right} alt="arrow_right" width={20} height={10} />
         </button>
@@ -59,8 +59,8 @@ const UpdateCard: React.FC<UpdateCardProps> = ({
 
 export default function Updates() {
   return (
-    <div className="p-4 lg:p-8 font-mono">
-      <h5 className="font-bold text-2xl">Latest Updates</h5>
+    <div className="p-4 lg:p-8">
+      <h2>Latest Updates</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2  xl:grid-cols-3 gap-3 my-4">
         <UpdateCard
           image={jica_img}

@@ -70,15 +70,15 @@ export default function Forms() {
   };
 
   return (
-    <div className="p-8 font-mono">
-      <h5 className="font-bold text-2xl">Forms</h5>
-      <div className="my-6">
+    <div className="p-4 md:p-8">
+      <h2>Forms</h2>
+      <div className="my-2 md:my-6">
         <select
           name="category"
           id="category"
           value={isActive}
           onChange={changeHandle}
-          className="border border-gray-300 p-2 rounded-md bg-white w-100"
+          className="border border-gray-300 p-2 rounded-md bg-white w-full"
         >
           {data?.map((item) => (
             <option value={item.id} key={item.id} className="px-2">

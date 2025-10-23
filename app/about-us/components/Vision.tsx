@@ -30,7 +30,7 @@ const Objective: React.FC<ObjectiveProps> = ({
         />
       </div>
       <div>
-        <h6 className="font-bold">{title}</h6>
+        <h6>{title}</h6>
         <p>{description}</p>
       </div>
     </div>
@@ -39,14 +39,14 @@ const Objective: React.FC<ObjectiveProps> = ({
 
 export default function Vision() {
   return (
-    <div className="p-4 lg:p-8 font-mono">
-      <h5 className="font-bold text-2xl">Vision</h5>
+    <div className="p-4 lg:p-8">
+      <h2>Vision</h2>
       <p className="my-2">
         “An Educated and enlightened society of GNH, built and sustained on the
         unique Bhutanese values of tha dam-tsig ley gju-drey.”
       </p>
       <div className="mt-8">
-        <h6 className="font-bold">Our Objectives</h6>
+        <h6 >Our Objectives</h6>
         <Objective
           image={policy_icon}
           title="Policy Development"

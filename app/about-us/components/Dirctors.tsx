@@ -19,13 +19,13 @@ const DirectorCard: React.FC<DirectorCardProps> = ({
   email,
 }) => {
   return (
-    <div className="rounded-md overflow-hidden relative h-100">
+    <div className="rounded-md overflow-hidden relative h-90 md:h-100">
       <Image src={image} alt={name} className="object-cover" fill />
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="absolute bottom-5 left-5 text-white z-10">
-        <p className="font-bold text-2xl">{name}</p>
-        <p className="font-bold">{title}</p>
-        <p className="font-bold">{department}</p>
+        <p className="font-bold text-base md:text-xl">{name}</p>
+        <p>{title}</p>
+        <p>{department}</p>
         <p>{email}</p>
       </div>
     </div>
@@ -34,7 +34,7 @@ const DirectorCard: React.FC<DirectorCardProps> = ({
 
 export default function Directors() {
   return (
-    <div className="p-8 font-mono bg-[#eee] py-12">
+    <div className="p-4 md:p-8 bg-[#eee] md:py-12">
       <h5 className="font-bold text-2xl">Directors</h5>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-center my-8">
         <DirectorCard

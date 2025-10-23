@@ -14,7 +14,7 @@ type StaffCardProps = {
 const StaffCard: React.FC<StaffCardProps> = ({ image, name, title, email }) => {
   return (
     <div className="rounded-md overflow-hidden border-2 border-[#d6d6d6] bg-white">
-      <div className="relative h-90 w-full">
+      <div className="relative md:h-90 w-full">
         <Image src={image} alt={name} className="object-cover" fill />
       </div>
       <div className="p-6">
@@ -28,10 +28,10 @@ const StaffCard: React.FC<StaffCardProps> = ({ image, name, title, email }) => {
 
 export default function MinistryOffice() {
   return (
-    <div className="p-4 lg:p-8 font-mono bg-[#eee] py-12">
-      <h5 className="font-bold text-2xl">Office of The Minister</h5>
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center my-8">
-        <div className="lg:col-span-2 rounded-md overflow-hidden relative h-130">
+    <div className="p-4 lg:p-8 bg-[#eee] md:py-12">
+      <h2>Office of The Minister</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center my-2 md:my-8">
+        <div className="lg:col-span-2 rounded-md overflow-hidden relative h-80 md:h-130">
           <Image
             src={minister_image}
             alt="ministry"
@@ -40,12 +40,12 @@ export default function MinistryOffice() {
           />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute bottom-5 left-5 text-white z-10">
-            <p className="font-bold text-2xl">Yeezang De Thapa</p>
+            <p className="font-bold text-xl md:text-2xl">Yeezang De Thapa</p>
             <p className="font-bold">Minister</p>
             <p>minister@moesd.gov.bt</p>
           </div>
         </div>
-        <div className="lg:col-span-3 leading-8">
+        <div className="lg:col-span-3 leading-2 md:leading-8 text-justify">
           <p>
             Her Excellency Yeezang De Thapa serves as the Minister for the
             Ministry of Education and Skills Development who assumed the new
@@ -71,7 +71,7 @@ export default function MinistryOffice() {
       </div>
       <div className="my-2">
         <h6 className="font-bold text-xl">Staff</h6>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 my-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 my-2 md:my-4">
           <StaffCard
             image={tandin_img}
             name="Tandin Wangmo"

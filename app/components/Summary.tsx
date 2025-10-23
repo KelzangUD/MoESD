@@ -19,10 +19,10 @@ const SummaryCard: React.FC<SummaryCardProps> = ({
   icon,
 }) => {
   return (
-    <div className="border rounded-md p-4 flex justify-between font-mono">
+    <div className="border rounded-md p-2 md:p-4 flex justify-between">
       <div>
         <p>{title}</p>
-        <h3 className="font-bold text-2xl lg:text-5xl">{new Intl.NumberFormat().format(number)}</h3>
+        <h4>{new Intl.NumberFormat().format(number)}</h4>
         <div className="flex gap-2">
           <p>
             Government: <span className="font-semibold">{new Intl.NumberFormat().format(gov)}</span>
@@ -41,9 +41,9 @@ const SummaryCard: React.FC<SummaryCardProps> = ({
 
 export default function Summary() {
   return (
-    <div className="px-4 lg:px-8 mt-8 pb-4 font-mono">
-      <h5 className="font-bold text-2xl">Summary as of 2024</h5>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 my-8">
+    <div className="px-4 lg:px-8 mt-4 mb-6 md:mt-8 md:mb-4">
+      <h2>Summary as of 2024</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 my-2 md:my-8">
         <SummaryCard
           title="Schools"
           number={566}

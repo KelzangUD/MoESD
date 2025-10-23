@@ -13,10 +13,10 @@ type StaffCardProps = {
 const StaffCard: React.FC<StaffCardProps> = ({ image, name, title, email }) => {
   return (
     <div className="rounded-md overflow-hidden border-2 border-[#d6d6d6] bg-white">
-      <div className="relative h-90 w-full">
+      <div className="relative md:h-90 w-full">
         <Image src={image} alt={name} className="object-cover" fill />
       </div>
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <p className="font-bold text-xl">{name}</p>
         <p className="font-bold">{title}</p>
         {email !== "" && <p>{email}</p>}
@@ -27,10 +27,10 @@ const StaffCard: React.FC<StaffCardProps> = ({ image, name, title, email }) => {
 
 export default function SecretaryOffice() {
   return (
-    <div className="p-4 lg:p-8 font-mono bg-white py-12">
+    <div className="p-4 lg:p-8 bg-white py-4 md:py-12">
       <h5 className="font-bold text-2xl">Office of The Secretary</h5>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center my-8">
-        <div className="lg:col-span-2 rounded-md overflow-hidden relative h-130">
+        <div className="lg:col-span-2 rounded-md overflow-hidden relative h-50 md:h-130">
           <Image
             src={secretary_img}
             alt="secretary"
@@ -39,12 +39,12 @@ export default function SecretaryOffice() {
           />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute bottom-5 left-5 text-white z-10">
-            <p className="font-bold text-2xl">Tshewang Chophel Dorji</p>
+            <p className="font-bold text-base md:text-xl">Tshewang Chophel Dorji</p>
             <p className="font-bold">Secretary</p>
             <p>secretary@moesd.gov.bt</p>
           </div>
         </div>
-        <div className="lg:col-span-3 leading-8">
+        <div className="lg:col-span-3 leading-2 md:leading-8 text-justify">
           <p>
             Dasho Tshewang Chophel Dorji serves as the Secretary of the Ministry
             of Education and Skills Development who assumed the new role on
@@ -69,8 +69,8 @@ export default function SecretaryOffice() {
         </div>
       </div>
       <div className="my-2">
-        <h6 className="font-bold text-xl">Staff</h6>
-        <div className="grid lg:grid-cols-4 gap-2 my-4">
+        <h2>Staff</h2>
+        <div className="grid lg:grid-cols-4 gap-2 my-2 md:my-4">
           <StaffCard
             image={yeshi_img}
             name="Yeshi Wangmo"

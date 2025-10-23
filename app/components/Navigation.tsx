@@ -10,7 +10,7 @@ export default function Navigation() {
   const [showPublicationsSubMenu, setShowPublicationsSubMenu] = useState(false);
   const [showDownloadsSubMenu, setShowDownloadsSubMenu] = useState(false);
   return (
-    <div className="py-1 px-2 lg:py-4 lg:px-8 flex justify-between items-center bg-white shadow-lg font-mono z-100">
+    <div className="py-1 px-2 lg:py-4 lg:px-8 flex justify-between items-center bg-white shadow-lg z-100">
       <nav className="relative">
         <ul className="font-semibold hidden xl:flex xl:gap-6">
           <li className="hover:text-blue-600 cursor-pointer">

@@ -1,14 +1,53 @@
 @import "tailwindcss";
 
 :root {
+  --font-merriweather: var(--font-merriweather);
+  ----font-open-sans: var(--font-open-sans);
   --background: #ffffff;
   --foreground: #171717;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
   margin: 0;
   padding: 0;
-  background: #f0f0f0 url("/images/bg_img.png") repeat;
+  background: var(--background) url("/images/bg_img.png") repeat;
 }
 
+@layer base {
+  /* Headings (h2, h4, h6) use Merriweather font */
+  h2 {
+    font-family: var(--font-merriweather);
+    @apply text-xl font-extrabold 
+           md:text-2xl 
+           lg:text-5xl 
+           xl:text-6xl 
+           2xl:text-7xl;
+  }
+  h4 {
+    font-family: var(--font-merriweather);
+    @apply text-base font-bold 
+           md:text-xl 
+           lg:text-2xl 
+           xl:text-3xl 
+           2xl:text-4xl;
+  }
+  h6 {
+    font-family: var(--font-merriweather);
+    @apply text-sm font-bold 
+           md:text-base /* Redundant, but harmless */
+           lg:text-xl 
+           xl:text-2xl 
+           2xl:text-2xl;
+  }
+  /* Paragraphs (p) use Open Sans font */
+  p {
+    font-family: var(--font-open-sans);
+    @apply text-xs 
+           md:text-sm 
+           lg:text-lg lg:leading-6 
+           xl:text-lg xl:leading-8 
+           2xl:text-2xl 2xl:leading-8;
+  }
+}

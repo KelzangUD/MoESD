@@ -21,15 +21,15 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col rounded-md overflow-hidden border-1 border-[#d6d6d6] bg-white shadow-sm">
-      <div className="relative h-90 w-full">
+      <div className="relative md:h-90 w-full">
         <Image src={image} alt={department} className="object-cover" fill />
       </div>
-      <div className="p-6">
-        <p className="font-bold text-xl">{department}</p>
-        <p className="mt-6">{description}</p>
+      <div className="p-2 md:p-6">
+        <p className="font-bold text-base md:text-xl">{department}</p>
+        <p className="mt-2 md:mt-6">{description}</p>
       </div>
-      <div className="mt-auto px-6 py-3 mb-3">
-        <button className="flex gap-2 font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:cursor-pointer">
+      <div className="mt-auto px-2 md:px-6 my-2 md:py-3 md:mb-3">
+        <button className="flex gap-2 items-center text-xs md:text-base md:font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:cursor-pointer">
           Visit <Image src={arrow_right} alt="arrow" width="20" height="10" />
         </button>
       </div>
@@ -39,9 +39,9 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
 
 export default function Department() {
   return (
-    <div className="p-4 lg:p-8 font-mono">
-      <h5 className="font-bold text-2xl">Departments</h5>
-      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-3 my-6">
+    <div className="p-4 lg:p-8">
+      <h2>Departments</h2>
+      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-3 my-2 md:my-6">
         <DepartmentCard
           image={dep_image}
           department="Department of Education (DEP)"
